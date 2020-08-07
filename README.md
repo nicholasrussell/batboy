@@ -1,11 +1,8 @@
-# batboy
+<img src="assets/logo/batboy.png" width="400px">
+
+[![Clojars Project](https://img.shields.io/clojars/v/dev.russell/batboy.svg)](https://clojars.org/dev.russell/batboy)
 
 A Clojure library for interacting with the [MLB Stats API](https://statsapi.mlb.com/).
-
-## Usage
-
-The latest release version of batboy is hosted on [Clojars](https://clojars.org):
-[![Current Version](https://clojars.org/dev.russell/batboy/latest-version.svg)](https://clojars.org/dev.russell/batboy)
 
 ## Shoutouts
 
