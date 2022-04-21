@@ -2,7 +2,7 @@
   (:require [clojure.test :as t]))
 
 (def nss
-  ['dev.russell.batboy.attendance.core
+  ['dev.russell.batboy.attendances.core
    'dev.russell.batboy.awards.core
    'dev.russell.batboy.conferences.core
    'dev.russell.batboy.divisions.core
@@ -25,9 +25,10 @@
   (t/testing "getters are defined"
     (t/is true (every?
                 (fn [ns]
-                  (let [metadata (var-get (var ns 'metadata))
-                        getters (map #(keyword (str "get-" (name %))) (keys (:endpoints metadata)))]
+                  (let [metadata (var-get (intern ns 'metadata))
+                        getters (map #(str "get-" (name %)) (keys (:endpoints metadata)))]
                     (and
                      (> (count getters) 0)
-                     (every? #(var ns %) getters))))
+                     (every? (fn [getter] (var-get (intern ns (symbol getter)))) getters))))
                 nss))))
+

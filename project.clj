@@ -5,8 +5,8 @@
   :url "https://russell.dev/batboy"
   :license {:name "apache-2.0"
             :url "https://www.apache.org/licenses/LICENSE-2.0"}
-  :dependencies [[org.clojure/clojure "1.10.1"]
-                 [clj-http "3.10.1"]
+  :dependencies [[org.clojure/clojure "1.10.3"]
+                 [clj-http "3.12.3"]
                  [cheshire "5.10.0"]]
   :source-paths ["src"]
   :repl-options {:init-ns dev.russell.batboy.core}

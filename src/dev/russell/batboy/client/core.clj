@@ -5,6 +5,7 @@
 
 (def ^{:private true :dynamic true} *stats-api-base-url* "https://statsapi.mlb.com/api")
 
+; Enable debug
 (def ^{:private true :dynamic true} *debug* false)
 
 (defn- make-stats-api-url
@@ -14,7 +15,7 @@
 (defn- make-request-context
   [options]
   (merge {:as :json
-          :async true}
+          :async? true}
          options
          (when *debug*
            {:debug *debug*
@@ -22,7 +23,7 @@
 
 (defn- async?
   [context]
-  (:async context))
+  (:async? context))
 
 (defn- async-call
   [path context]
@@ -76,4 +77,3 @@
       {:path endpoint}
       endpoint)
     (make-request-context context))))
-

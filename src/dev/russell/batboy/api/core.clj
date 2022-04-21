@@ -7,8 +7,8 @@
   ([version metadata]
    (merge
     metadata
-    {:path (str "/{version}" (:path metadata))
-     :path-params (merge {:version {:default version}}
+    {:path (str "/{api-version}" (:path metadata))
+     :path-params (merge {:api-version {:default version}}
                          (:path-params metadata))})))
 
 (defn defaults
