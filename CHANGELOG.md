@@ -3,11 +3,11 @@ All notable changes to this project will be documented in this file. This change
 
 ## [Unreleased]
 
+## 0.2.0 - 2022-04-26
+### Added
+- Person stats endpoint
+
 ## 0.1.0 - 2020-08-07
 ### Added
-- Files from the new template.
-- Initial calls to stats API.
-
-[Unreleased]: https://github.com/nicholasrussell/batboy/compare/0.1.0...HEAD
-[0.1.0]: https://github.com/nicholasrussell/batboy/releases/tag/0.1.0
-
+- Files from the new template
+- Initial calls to stats API

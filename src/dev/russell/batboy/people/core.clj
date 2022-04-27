@@ -16,6 +16,12 @@
      :person
      (api/versioned {:path "/people/{id}"
                      :path-params {:id {}}})
+     :person-stats
+     (api/versioned {:path "/people/{id}/stats"
+                     :path-params {:id {}}
+                     :query-params [:stats
+                                    :group
+                                    :opposingPlayerId]})
      :person-stats-game
      (api/versioned {:path "/people/{id}/stats/game/{game-id}"
                      :path-params {:id {}
