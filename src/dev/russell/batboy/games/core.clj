@@ -39,13 +39,18 @@
                      :path-params {:id {}}})
      :game-feed-live
      (api/versioned "v1.1" {:path "/game/{id}/feed/live"
-                           :path-params {:id {}}
-                           :query-params [:timecode]})
+                            :path-params {:id {}}
+                            :query-params [:timecode]})
      :game-feed-live-v1
      (api/versioned {:path "/game/{id}/feed/live"
                      :path-params {:id {}}
                      :query-params [:timecode]})
      :game-feed-live-diff-patch
+     (api/versioned "v1.1" {:path "/game/{id}/feed/live/diffPatch"
+                            :path-params {:id {}}
+                            :query-params [:startTimecode
+                                           :endTimecode]})
+     :game-feed-live-diff-patch-v1
      (api/versioned {:path "/game/{id}/feed/live/diffPatch"
                      :path-params {:id {}}
                      :query-params [:startTimecode
